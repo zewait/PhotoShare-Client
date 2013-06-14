@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="tab_subscription_photos">订阅图片</string>
+	<string name="tab_radio_oneselt">个人</string>
+	<string name="tab_btn_camera">相机</string>
+	<string name="tab_nearby_photos">附近图片</string>
+	<string name="tab_radio_edit">编写</string>
+	<string name="tab_radio_reload">搜索</string>
+	<string name="tab_radio_more">更多</string>
+</resources>

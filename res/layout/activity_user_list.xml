@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+
+    <!-- 标题栏 -->
+
+ <RelativeLayout
+        android:id="@+id/user_list_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/black" >
+
+        <TextView
+            android:id="@+id/user_list_textview_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_bar_layout_height"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/public_top_bar_bg"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/title_bar_txt_size" />
+
+        <ImageView
+            android:id="@+id/user_list_btn_back"
+            android:layout_width="@dimen/public_btn_refresh_layout_width"
+            android:layout_height="@dimen/title_bar_layout_height"
+            android:layout_alignLeft="@+id/register_textview_title"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@anim/public_btn_background"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:src="@drawable/public_btn_back" />
+
+        <ImageView
+            android:layout_width="@dimen/line_bg_layout_width"
+            android:layout_height="@dimen/title_bar_layout_height"
+            android:layout_toRightOf="@+id/register_btn_back"
+            android:background="@drawable/line_bg" />
+    </RelativeLayout>
+    
+    <ListView 
+        android:id="@+id/user_list_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_list_title_bar"
+        android:fadingEdge="none"
+        ></ListView>
+
+</RelativeLayout>

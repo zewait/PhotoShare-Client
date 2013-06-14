@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="Gallery">
+        <attr name="android:galleryItemBackground" />
+    </declare-styleable>
+    <declare-styleable name="PorterDuffView">
+        <attr name="fontSize" format="integer"></attr>
+        <attr name="porterduffMode" format="boolean"></attr>
+    </declare-styleable>
+
+</resources>

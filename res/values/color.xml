@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    
+    <color name="gray_dark">#8e8e8e</color>
+    <color name="gray">#cdcdcd</color>
+    <color name="gray_simple">#e5e5e5</color>
+    <color name="red">#ff0000</color>
+    <color name="yellow">#fff7c531</color>
+    <color name="dark_yellow">#fab001</color>
+    <color name="bg_gray">#eaeaea</color>
+    <color name="light_yellow">#ffcc33</color>
+    
+    <color name="text_clickable">#346890</color>
+    <color name="transition">#90000000</color>
+    <color name="btn_bg_release">#d65460</color>
+    <color name="btn_bg_press">#ff909a</color>
+</resources>

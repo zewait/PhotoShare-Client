@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="215.0px"
+    android:layout_height="215.0px" >
+
+    <RelativeLayout
+        android:layout_width="215.0px"
+        android:layout_height="215.0px" >
+
+        <ImageView
+            android:id="@+id/nearby_gridview_img"
+            android:layout_width="215.0px"
+            android:layout_height="215.0px"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/public_img_bg" />
+
+        <RelativeLayout
+            android:layout_width="215.0px"
+            android:layout_height="50.0px"
+            android:layout_alignBottom="@+id/nearby_gridview_img"
+            android:layout_alignParentLeft="true"
+            android:background="@color/transition" >
+
+            <TextView
+                android:id="@+id/nearby_gridview_text_juli"
+                android:layout_width="wrap_content"
+                android:layout_height="30.0px"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20.0px"
+                android:text="@string/nearby_gridview_text_juli"
+                android:textColor="@android:color/white"
+                android:textSize="20.0px"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/gridview_photos_nearby_like_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20.0px"
+                android:text="@string/gridview_photos_nearby_like_num"
+                android:textColor="@android:color/white"
+                android:textSize="18.0px"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/gridview_photos_nearby_liked"
+                android:layout_width="20.0px"
+                android:layout_height="17.0px"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8.0px"
+                android:layout_toLeftOf="@+id/gridview_photos_nearby_like_num"
+                android:src="@drawable/photo_nearby_like" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

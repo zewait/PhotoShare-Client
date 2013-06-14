@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="227.0px"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="300.0px"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <!-- 标题栏 -->
+
+        <TextView
+            android:id="@+id/dialog_select_txt_title"
+            android:layout_width="match_parent"
+            android:layout_height="60.0px"
+            android:layout_alignParentTop="true"
+            android:background="@color/btn_bg_release"
+            android:gravity="center"
+            android:text="@string/dialog_select_txt_title"
+            android:textColor="@android:color/white"
+            android:textSize="28.0px"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/dialog_select_btn_take_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dialog_select_txt_title"
+            android:background="@anim/public_list_iten_background"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:padding="8.0px"
+            android:text="@string/dialog_select_btn_take_photo"
+            android:textColor="@android:color/black"
+            android:textSize="22.0px" />
+
+        <View
+            android:id="@+id/dialog_select_view_line1"
+            android:layout_width="match_parent"
+            android:layout_height="4.0px"
+            android:layout_below="@+id/dialog_select_btn_take_photo"
+            android:background="@color/bg_gray" />
+
+        <Button
+            android:id="@+id/dialog_select_btn_select_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dialog_select_view_line1"
+            android:background="@anim/public_list_iten_background"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:padding="8.0px"
+            android:text="@string/dialog_select_btn_select_photo"
+            android:textColor="@android:color/black"
+            android:textSize="22.0px" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

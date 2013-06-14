@@ -1,0 +1,279 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray" >
+
+    <RelativeLayout
+        android:id="@+id/oneselt_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/black" >
+
+        <TextView
+            android:id="@+id/oneselt_txt_top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_bar_layout_height"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/public_top_bar_bg"
+            android:gravity="center"
+            android:text="@string/oneselt_txt_title"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/title_bar_txt_size" />
+
+        <ImageView
+            android:id="@+id/oneselt_btn_refresh"
+            android:layout_width="@dimen/public_btn_refresh_layout_width"
+            android:layout_height="@dimen/title_bar_layout_height"
+            android:layout_alignRight="@+id/oneselt_txt_top_bar"
+            android:background="@anim/public_btn_background"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:src="@drawable/public_btn_refresh" />
+
+        <RelativeLayout
+            android:id="@+id/oneselt_layout_back"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/title_bar_layout_height"
+            android:layout_alignLeft="@+id/oneselt_txt_top_bar" >
+
+            <ImageView
+                android:id="@+id/oneselt_img_back"
+                android:layout_width="@dimen/public_btn_refresh_layout_width"
+                android:layout_height="@dimen/title_bar_layout_height"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="@anim/public_btn_background"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:src="@drawable/public_btn_back" />
+
+            <ImageView
+                android:layout_width="@dimen/line_bg_layout_width"
+                android:layout_height="@dimen/title_bar_layout_height"
+                android:layout_toRightOf="@+id/oneselt_img_back"
+                android:background="@drawable/line_bg" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="@dimen/line_bg_layout_width"
+            android:layout_height="@dimen/title_bar_layout_height"
+            android:layout_toLeftOf="@+id/oneselt_btn_refresh"
+            android:background="@drawable/line_bg" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/oneselt_headPic_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/oneselt_title_bar" >
+
+        <RelativeLayout
+            android:id="@+id/oneselt_top_background"
+            android:layout_width="match_parent"
+            android:layout_height="154.0px"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/public_oneself_bg" >
+
+            <!-- 喜欢like    关注guanz    粉丝fan -->
+
+            <RelativeLayout
+                android:id="@+id/oneselt_top_lay_like"
+                android:layout_width="230.0px"
+                android:layout_height="90.0px"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10.0px"
+                android:background="@color/transition" >
+
+                <View
+                    android:id="@+id/oneselt_view_like"
+                    android:layout_width="74.0px"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:clickable="true"
+                    android:onClick="onClick" />
+
+                <TextView
+                    android:id="@+id/oneselt_txt_like_value"
+                    android:layout_width="74.0px"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20.0px"
+                    android:gravity="center_horizontal"
+                    android:text="@string/oneselt_txt_like_value"
+                    android:textColor="@android:color/white"
+                    android:textSize="17.0px"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/oneselt_txt_like_key"
+                    android:layout_width="74.0px"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/oneselt_txt_like_value"
+                    android:layout_below="@+id/oneselt_txt_like_value"
+                    android:layout_marginTop="10.0px"
+                    android:gravity="center_horizontal"
+                    android:text="@string/oneselt_txt_like_key"
+                    android:textColor="@android:color/white"
+                    android:textSize="17.0px"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/oneselt_top_img_like_lin"
+                    android:layout_width="4.0px"
+                    android:layout_height="154.0px"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/oneselt_txt_like_key"
+                    android:background="@android:color/white"
+                    android:src="@drawable/line_bg" />
+
+                <View
+                    android:id="@+id/oneselt_view_subscription"
+                    android:layout_width="74.0px"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/oneselt_top_img_like_lin"
+                    android:clickable="true"
+                    android:onClick="onClick" />
+
+                <TextView
+                    android:id="@+id/oneselt_txt_subscription_value"
+                    android:layout_width="74.0px"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/oneselt_txt_like_value"
+                    android:layout_toRightOf="@+id/oneselt_top_img_like_lin"
+                    android:gravity="center_horizontal"
+                    android:text="@string/oneselt_txt_subscription_value"
+                    android:textColor="@android:color/white"
+                    android:textSize="17.0px"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/oneselt_txt_subscription_key"
+                    android:layout_width="74.0px"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/oneselt_txt_like_key"
+                    android:layout_alignBottom="@+id/oneselt_txt_like_key"
+                    android:layout_alignRight="@+id/oneselt_txt_subscription_value"
+                    android:gravity="center_horizontal"
+                    android:text="@string/oneselt_txt_subscription_key"
+                    android:textColor="@android:color/white"
+                    android:textSize="17.0px"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/oneselt_top_img_like_lins"
+                    android:layout_width="4.0px"
+                    android:layout_height="154.0px"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/oneselt_txt_subscription_key"
+                    android:background="@android:color/white"
+                    android:src="@drawable/line_bg" />
+
+                <View
+                    android:id="@+id/oneselt_view_fan"
+                    android:layout_width="74.0px"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/oneselt_top_img_like_lins"
+                    android:clickable="true"
+                    android:onClick="onClick" />
+
+                <TextView
+                    android:id="@+id/oneselt_txt_fan_value"
+                    android:layout_width="74.0px"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/oneselt_txt_subscription_value"
+                    android:layout_alignBottom="@+id/oneselt_txt_subscription_value"
+                    android:layout_toRightOf="@+id/oneselt_txt_subscription_value"
+                    android:gravity="center_horizontal"
+                    android:text="@string/oneselt_txt_fan_value"
+                    android:textColor="@android:color/white"
+                    android:textSize="17.0px"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/oneselt_txt_fan_key"
+                    android:layout_width="74.0px"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/oneselt_txt_subscription_key"
+                    android:layout_alignBottom="@+id/oneselt_txt_subscription_key"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_horizontal"
+                    android:text="@string/oneselt_txt_fan_key"
+                    android:textColor="@android:color/white"
+                    android:textSize="17.0px"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!-- 用户头像 -->
+
+    <RelativeLayout
+        android:id="@+id/oneselt_layout_head_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/oneselt_headPic_top"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="-50.0px"
+        android:layout_marginLeft="15.0px" >
+
+        <ImageView
+            android:id="@+id/oneselt_img_head_pic"
+            android:layout_width="100.0px"
+            android:layout_height="100.0px"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:src="@null" />
+
+        <ProgressBar
+            android:id="@+id/oneselt_progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/oneselt_btn_subscription"
+        android:layout_width="80.0px"
+        android:layout_height="40.0px"
+        android:layout_alignBottom="@+id/oneselt_layout_head_pic"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10.0px"
+        android:background="@anim/public_btn_background"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:text="@string/oneselt_btn_subscription"
+        android:textColor="@android:color/white"
+        android:textSize="18.0px" />
+
+    <ImageView
+        android:id="@+id/oneselt_img_split_line"
+        android:layout_width="match_parent"
+        android:layout_height="2.0px"
+        android:layout_alignBottom="@+id/oneselt_layout_head_pic"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/public_split_line" />
+
+    <share.photo.view.LazyScrollView
+        android:id="@+id/oneselt_waterfall_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/oneselt_img_split_line"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:id="@+id/oneselt_waterfall_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </LinearLayout>
+    </share.photo.view.LazyScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="oneselt_txt_title">用户</string>
+	
+	<string name="oneselt_txt_like_key">喜欢</string>
+	<string name="oneselt_txt_like_value">0</string>
+	
+	
+	<string name="oneselt_txt_subscription_value">0</string>
+	<string name="oneselt_txt_subscription_key">关注</string>
+	
+	
+	<string name="oneselt_txt_fan_key">粉丝</string>
+	<string name="oneselt_txt_fan_value">0</string>
+	
+	<string name="oneselt_txt_user_name">null</string>
+	
+	<string name="oneselt_btn_subscription">关注</string>
+	
+	
+</resources>

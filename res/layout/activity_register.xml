@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+
+    <!-- 标题栏 -->
+
+    <RelativeLayout
+        android:id="@+id/register_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/black" >
+
+        <TextView
+            android:id="@+id/register_textview_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_bar_layout_height"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/public_top_bar_bg"
+            android:gravity="center"
+            android:text="@string/register_title"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/title_bar_txt_size" />
+
+        <ImageView
+            android:id="@+id/register_btn_back"
+            android:layout_width="@dimen/public_btn_refresh_layout_width"
+            android:layout_height="@dimen/title_bar_layout_height"
+            android:layout_alignLeft="@+id/register_textview_title"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@anim/public_btn_background"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:src="@drawable/public_btn_back" />
+
+        <ImageView
+            android:layout_width="@dimen/line_bg_layout_width"
+            android:layout_height="@dimen/title_bar_layout_height"
+            android:layout_toRightOf="@+id/register_btn_back"
+            android:background="@drawable/line_bg" />
+    </RelativeLayout>
+
+    <!-- 主内容 -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/register_title_bar" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <EditText
+                android:id="@+id/register_edittext_name"
+                android:layout_width="400.0px"
+                android:layout_height="60.0px"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="22.0px"
+                android:background="@color/bg_gray"
+                android:ems="10"
+                android:hint="@string/register_edittext_name"
+                android:paddingLeft="10.0px"
+                android:paddingRight="10.0px"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/edit_text_size" >
+            </EditText>
+
+            <EditText
+                android:id="@+id/register_edittext_password"
+                android:layout_width="400.0px"
+                android:layout_height="60.0px"
+                android:layout_below="@+id/register_edittext_name"
+                android:layout_centerHorizontal="true"
+                android:paddingLeft="10.0px"
+                android:paddingRight="10.0px"
+                android:layout_marginTop="10.0px"
+                android:background="@color/bg_gray"
+                android:hint="@string/register_edittext_password"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/edit_text_size" >
+            </EditText>
+            
+            <EditText
+                android:id="@+id/register_edittext_repassword"
+                android:layout_width="400.0px"
+                android:layout_height="60.0px"
+                android:layout_below="@+id/register_edittext_password"
+                android:layout_centerHorizontal="true"
+                android:paddingLeft="10.0px"
+                android:paddingRight="10.0px"
+                android:layout_marginTop="10.0px"
+                android:background="@color/bg_gray"
+                android:hint="@string/register_edittext_repassword"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/edit_text_size" >
+            </EditText>
+
+            <Button
+                android:id="@+id/register_btn_register"
+                android:layout_width="400.0px"
+                android:layout_height="60.0px"
+                android:layout_below="@+id/register_edittext_repassword"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10.0px"
+                android:background="@anim/public_btn_background"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="@string/register_btn_register"
+                android:textColor="@android:color/white"
+                android:textSize="28.0px"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+
+    <!-- 标题栏 -->
+
+    <RelativeLayout
+        android:id="@+id/login_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/black" >
+
+        <TextView
+            android:id="@+id/login_textview_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_bar_layout_height"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/public_top_bar_bg"
+            android:gravity="center_vertical"
+            android:text="@string/login_textview_title"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/title_bar_txt_size" />
+    </RelativeLayout>
+    <!-- 主内容 -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/login_title_bar" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <EditText
+                android:id="@+id/login_edittext_name"
+                android:layout_width="400.0px"
+                android:layout_height="60.0px"
+                android:layout_alignLeft="@+id/login_btn_login"
+                android:layout_below="@+id/login_textview_title"
+                android:layout_marginTop="22dp"
+                android:background="@color/bg_gray"
+                android:ems="10"
+                android:hint="@string/login_edittext_name"
+                android:paddingLeft="10.0px"
+                android:paddingRight="10.0px"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/edit_text_size" >
+            </EditText>
+
+            <EditText
+                android:id="@+id/login_edittext_password"
+                android:layout_width="400.0px"
+                android:layout_height="60.0px"
+                android:layout_below="@+id/login_edittext_name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10.0px"
+                android:background="@color/bg_gray"
+                android:hint="@string/login_edittext_password"
+                android:inputType="textPassword"
+                android:paddingLeft="10.0px"
+                android:paddingRight="10.0px"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/edit_text_size" />
+
+            <Button
+                android:id="@+id/login_btn_login"
+                android:layout_width="400.0px"
+                android:layout_height="70.0px"
+                android:layout_below="@+id/login_edittext_password"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="17.0px"
+                android:background="@anim/public_btn_background"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="@string/login_btn_login"
+                android:textColor="@android:color/white"
+                android:textSize="28.0px"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/login_btn_register"
+                android:layout_width="400.0px"
+                android:layout_height="70.0px"
+                android:layout_alignLeft="@+id/login_edittext_password"
+                android:layout_below="@+id/login_btn_login"
+                android:layout_marginTop="16dp"
+                android:background="@anim/public_btn_background"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="@string/login_btn_register"
+                android:textColor="@android:color/white"
+                android:textSize="28.0px"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

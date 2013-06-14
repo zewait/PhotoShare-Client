@@ -1,0 +1,112 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray" >
+
+    <RelativeLayout
+        android:id="@+id/photo_comment_list_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/black" >
+
+        <TextView
+            android:id="@+id/photo_comment_list_txt_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_bar_layout_height"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/public_top_bar_bg"
+            android:gravity="center"
+            android:text="@string/photo_comment_list_txt_title"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/title_bar_txt_size" />
+
+        <ImageView
+            android:id="@+id/photo_comment_list_btn_refresh"
+            android:layout_width="@dimen/public_btn_refresh_layout_width"
+            android:layout_height="@dimen/title_bar_layout_height"
+            android:layout_alignRight="@+id/photo_comment_list_txt_title"
+            android:background="@anim/public_btn_background"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:src="@drawable/public_btn_refresh" />
+
+        <ImageView
+            android:layout_width="@dimen/line_bg_layout_width"
+            android:layout_height="@dimen/title_bar_layout_height"
+            android:layout_toLeftOf="@+id/photo_comment_list_btn_refresh"
+            android:background="@drawable/line_bg" />
+
+        <ImageView
+            android:id="@+id/photo_comment_list_img_back"
+            android:layout_width="@dimen/public_btn_refresh_layout_width"
+            android:layout_height="@dimen/title_bar_layout_height"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@anim/public_btn_background"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:src="@drawable/public_btn_back" />
+
+        <ImageView
+            android:layout_width="@dimen/line_bg_layout_width"
+            android:layout_height="@dimen/title_bar_layout_height"
+            android:layout_toRightOf="@+id/photo_comment_list_img_back"
+            android:background="@drawable/line_bg" />
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/photo_comment_list_buttom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="83.0px"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/public_bottom_bar_bg" >
+
+        <EditText
+            android:id="@+id/photo_comment_list_edit"
+            android:layout_width="350.0px"
+            android:layout_height="70.0px"
+            android:layout_centerInParent="true"
+            android:background="@drawable/public_edit"
+            android:paddingLeft="8.0px"
+            android:paddingRight="8.0px"
+            android:singleLine="true"
+            android:textSize="26.0px" />
+
+        <ImageView
+            android:id="@+id/photo_comment_list_my_head_pic"
+            android:layout_width="50.0px"
+            android:layout_height="50.0px"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/photo_comment_list_edit"
+            android:scaleType="centerCrop"
+            android:src="@drawable/public_head_pic" />
+
+        <ImageView
+            android:id="@+id/photo_comment_list_img_commit"
+            android:layout_width="64.0px"
+            android:layout_height="70.0px"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/photo_comment_list_edit"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:src="@anim/public_btn_commit_background" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/photo_comment_list_listview_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:dividerHeight="2.0px"
+        android:divider="@drawable/public_split_line"
+        android:layout_above="@+id/photo_comment_list_buttom_bar"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/photo_comment_list_title_bar" >
+    </ListView>
+
+    
+
+</RelativeLayout>

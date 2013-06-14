@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray" >
+
+    <RelativeLayout
+        android:id="@+id/user_search_by_name_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/black" >
+
+        <TextView
+            android:id="@+id/user_search_by_name_textview_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_bar_layout_height"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/public_top_bar_bg"
+            android:gravity="center"
+            android:text="@string/user_search_by_name_textview_title"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/title_bar_txt_size" />
+
+        <ImageView
+            android:id="@+id/user_search_by_name_btn_back"
+            android:layout_width="@dimen/public_btn_refresh_layout_width"
+            android:layout_height="@dimen/title_bar_layout_height"
+            android:layout_alignLeft="@+id/user_search_by_name_textview_title"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@anim/public_btn_background"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:src="@drawable/public_btn_back" />
+
+        <ImageView
+            android:layout_width="@dimen/line_bg_layout_width"
+            android:layout_height="@dimen/title_bar_layout_height"
+            android:layout_toRightOf="@+id/user_search_by_name_btn_back"
+            android:background="@drawable/line_bg" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/user_search_by_name_edittext_username"
+        android:layout_width="410.0px"
+        android:layout_height="75.0px"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/user_search_by_name_title_bar"
+        android:background="@drawable/public_edit_bg"
+        android:hint="搜索用户"
+        android:paddingLeft="34.0px"
+        android:paddingRight="60.0px"
+        android:singleLine="true"
+        android:textColor="@android:color/black"
+        android:textSize="24.0px" />
+
+    <View
+        android:id="@+id/user_search_by_name_view"
+        android:layout_width="match_parent"
+        android:layout_height="2.0px"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/user_search_by_name_edittext_username"
+        android:background="#FFABABAB" />
+
+    <ImageView
+        android:id="@+id/user_search_by_name_img_search_clear"
+        android:layout_width="40.0px"
+        android:layout_height="40.0px"
+        android:layout_alignRight="@+id/user_search_by_name_edittext_username"
+        android:layout_alignTop="@+id/user_search_by_name_edittext_username"
+        android:layout_marginRight="17.0px"
+        android:layout_marginTop="17.0px"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:src="@drawable/public_edit_search_clear" />
+
+    <ImageView
+        android:id="@+id/user_search_by_name_img_search"
+        android:layout_width="@dimen/public_btn_refresh_layout_width"
+        android:layout_height="@dimen/title_bar_layout_height"
+        android:layout_alignBottom="@+id/user_search_by_name_edittext_username"
+        android:layout_alignParentRight="true"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:src="@drawable/public_edit_btn" />
+
+    <ListView
+        android:id="@+id/user_search_by_name_listview_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/user_search_by_name_view"
+        android:layout_marginTop="10.0px"
+        android:divider="@drawable/public_split_line" >
+    </ListView>
+
+</RelativeLayout>

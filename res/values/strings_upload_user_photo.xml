@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="upload_user_photo_textview_title">上传图片</string>
+	<string name="upload_user_photo_btn_location">定位</string>
+	<string name="upload_user_photo_content">内容</string>
+	<string name="upload_user_photo_btn_upload">发送</string>
+	<string name="upload_user_photo_checkbox_is_blow">发布到吹图片</string>
+	
+	
+	
+</resources>

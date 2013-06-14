@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="login_textview_title">登录</string>
+	<string name="login_edittext_password">密码</string>
+	<string name="login_btn_login">登录</string>
+	<string name="login_edittext_name">用户名</string>
+	<string name="login_btn_register">注册</string>
+	
+</resources>

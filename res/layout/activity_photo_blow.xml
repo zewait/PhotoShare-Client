@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray" >
+
+    <RelativeLayout
+        android:id="@+id/photo_blow_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/black" >
+
+        <TextView
+            android:id="@+id/photo_blow_txt_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_bar_layout_height"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/public_top_bar_bg"
+            android:gravity="center"
+            android:text="@string/photo_blow_txt_title"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/title_bar_txt_size" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/photo_blow_head_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/photo_blow_title_bar" >
+
+        <RelativeLayout
+            android:id="@+id/photo_blow_head_layout_photo_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/photo_blow_head_layout_user_info"
+                android:layout_width="match_parent"
+                android:layout_height="100.0px"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="8.0px" >
+
+                <ImageView
+                    android:id="@+id/photo_blow_head_img_user_src"
+                    android:layout_width="100.0px"
+                    android:layout_height="100.0px"
+                    android:clickable="true"
+                    android:onClick="onClick"
+                    android:src="@drawable/public_head_pic" />
+
+                <TextView
+                    android:id="@+id/photo_blow_head_txt_user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/photo_blow_head_img_user_src"
+                    android:layout_margin="8.0px"
+                    android:layout_toRightOf="@+id/photo_blow_head_img_user_src"
+                    android:text="@string/photo_show_textView_user_name"
+                    android:textColor="@android:color/black"
+                    android:textSize="30.0px"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/photo_blow_head_txt_create_time_key"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/photo_blow_head_img_user_src"
+                    android:layout_alignLeft="@+id/photo_blow_head_txt_user_name"
+                    android:text="@string/photo_show_txt_create_time_key"
+                    android:textColor="@color/gray_dark"
+                    android:textSize="22.0px" />
+
+                <TextView
+                    android:id="@+id/photo_blow_head_txt_create_time_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/photo_blow_head_txt_create_time_key"
+                    android:layout_toRightOf="@+id/photo_blow_head_txt_create_time_key"
+                    android:textColor="@color/gray_dark"
+                    android:textSize="18.0px" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/photo_blow_head_layout_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/photo_blow_head_layout_user_info"
+                android:layout_centerHorizontal="true" >
+
+                <RelativeLayout
+                    android:id="@+id/photo_blow_head_layout_photo_entity"
+                    android:layout_width="400.0px"
+                    android:layout_height="400.0px"
+                    android:layout_centerInParent="true"
+                    android:background="@android:color/white" >
+
+                    <share.photo.view.BlowView
+                        android:id="@+id/photo_blow_head_blowview_shade"
+                        android:layout_width="400.0px"
+                        android:layout_height="400.0px"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20.0px" >
+                    </share.photo.view.BlowView>
+
+                    <share.photo.view.PorterDuffView
+                        xmlns:porterduff="http://schemas.android.com/apk/res/share.photo.sharephoto"
+                        android:id="@+id/photo_blow_head_porterduff_download"
+                        android:layout_width="400.0px"
+                        android:layout_height="400.0px"
+                        android:layout_alignBottom="@+id/photo_blow_head_blowview_shade"
+                        android:layout_alignLeft="@+id/photo_blow_head_blowview_shade"
+                        android:layout_alignRight="@+id/photo_blow_head_blowview_shade"
+                        android:layout_alignTop="@+id/photo_blow_head_blowview_shade"
+                        android:background="@color/gray"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/public_img_bg"
+                        porterduff:porterduffMode="true" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/photo_blow_head_txt_photo_coment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/photo_blow_head_layout_photo_entity"
+                    android:layout_alignRight="@+id/photo_blow_head_layout_photo_entity"
+                    android:layout_below="@+id/photo_blow_head_layout_photo_entity"
+                    android:background="@android:color/white"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="20.0px"
+                    android:paddingLeft="10.0px"
+                    android:paddingRight="10.0px"
+                    android:textColor="@android:color/black"
+                    android:textSize="24.0px" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/photo_blow_head_txt_comment_num_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/photo_blow_head_layout_photo"
+                android:layout_below="@+id/photo_blow_head_layout_photo"
+                android:layout_marginBottom="4.0px"
+                android:layout_marginTop="4.0px"
+                android:text="@string/photo_show_comment_num_value"
+                android:textColor="@color/gray_dark"
+                android:textSize="18.0px" />
+
+            <TextView
+                android:id="@+id/photo_blow_head_txt_comment_num_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/photo_blow_head_txt_comment_num_value"
+                android:layout_toRightOf="@+id/photo_blow_head_txt_comment_num_value"
+                android:text="@string/photo_show_comment_num_key"
+                android:textColor="@color/gray_dark"
+                android:textSize="18.0px" />
+
+            <TextView
+                android:id="@+id/photo_blow_head_txt_see_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/photo_blow_head_txt_comment_num_value"
+                android:layout_marginLeft="6.0px"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:layout_toRightOf="@+id/photo_blow_head_txt_comment_num_key"
+                android:text="@string/photo_blow_head_txt_see_comment"
+                android:textColor="@color/text_clickable"
+                android:textSize="18.0px" />
+
+            <ImageView
+                android:id="@+id/photo_blow_head_img_split_line"
+                android:layout_width="match_parent"
+                android:layout_height="2.0px"
+                android:layout_below="@+id/photo_blow_head_txt_comment_num_value"
+                android:background="@drawable/public_split_line" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

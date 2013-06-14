@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="320px"
+    android:layout_height="100px" >
+
+     <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70px"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" >
+
+        <ImageView
+            android:id="@+id/photo_comment_list_img_usersrc"
+            android:layout_width="60px"
+            android:layout_height="60px"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/public_head_pic" />
+
+        <TextView
+            android:id="@+id/photo_comment_list_textView__time"
+            android:layout_width="wrap_content"
+            android:layout_height="28.0px"
+            android:layout_alignBottom="@+id/photo_comment_list_img_usersrc"
+            android:layout_marginLeft="8.0px"
+            android:layout_marginRight="8px"
+            android:layout_toRightOf="@+id/photo_comment_list_img_usersrc"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textSize="12px"
+            android:textStyle="bold"  />
+
+        <TextView
+            android:id="@+id/photo_comment_list_textView_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/photo_comment_list_textView_content"
+            android:layout_alignBottom="@+id/photo_comment_list_textView_content"
+            android:layout_alignLeft="@+id/photo_comment_list_textView__time"
+            android:maxLines="2"
+            android:textColor="@android:color/black"
+            android:textSize="12px"/>
+
+        <TextView
+            android:id="@+id/photo_comment_list_textView_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/photo_comment_list_textView__time"
+            android:layout_marginLeft="3px"
+            android:layout_toRightOf="@+id/photo_comment_list_textView_name"
+            android:text="内容" 
+            android:textColor="@android:color/black"
+            android:textSize="12px"/>
+        
+    </RelativeLayout>
+    
+</RelativeLayout>

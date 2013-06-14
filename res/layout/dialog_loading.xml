@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ProgressBar
+        android:id="@+id/dialog_loading_progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+    <TextView
+        android:id="@+id/dialog_loading_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dialog_loading_progressBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24.0px"
+        android:text="登陆中..."
+        android:textColor="@android:color/black"
+        android:textSize="24.0px"
+        android:textStyle="bold" />
+
+</RelativeLayout>

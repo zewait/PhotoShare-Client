@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0px"
+            android:layout_weight="1.0" />
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.0"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/tab_layout_menu_buttom"
+            android:layout_width="match_parent"
+            android:layout_height="81.0px"
+            android:layout_gravity="bottom" >
+
+            <RadioGroup
+                android:id="@+id/tab_radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="81.0px"
+                android:background="@drawable/public_bottom_bar_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/tab_radio_subscription_photos"
+                    style="@style/main_tab_bottom"
+                    android:background="@drawable/public_menu_home"
+                    android:checked="true"
+                    android:tag="radio_button0" />
+
+                <ImageView
+                    android:id="@+id/tab_line_1"
+                    android:layout_width="@dimen/line_bg_layout_width"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/line_bg" />
+
+                <RadioButton
+                    android:id="@+id/tab_radio_nearby_photos"
+                    style="@style/main_tab_bottom"
+                    android:background="@drawable/public_menu_loc"
+                    android:tag="radio_button1" />
+
+                <ImageView
+                    android:id="@+id/tab_line_2"
+                    android:layout_width="@dimen/line_bg_layout_width"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/line_bg" />
+
+                <ImageView
+                    android:id="@+id/tab_btn_camera"
+                    android:layout_width="96.0px"
+                    android:layout_height="81.0px"
+                    android:background="@drawable/public_menu_photo"
+                    android:onClick="onClick" />
+
+                <ImageView
+                    android:id="@+id/tab_line_3"
+                    android:layout_width="@dimen/line_bg_layout_width"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/line_bg" />
+
+                <RadioButton
+                    android:id="@+id/tab_radio_blow"
+                    style="@style/main_tab_bottom"
+                    android:background="@drawable/public_menu_blow"
+                    android:tag="radio_button3" />
+
+                <ImageView
+                    android:id="@+id/tab_line_4"
+                    android:layout_width="@dimen/line_bg_layout_width"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/line_bg" />
+
+                <RadioButton
+                    android:id="@+id/tab_radio_oneselt"
+                    style="@style/main_tab_bottom"
+                    android:background="@drawable/public_menu_onself"
+                    android:tag="radio_button2" />
+            </RadioGroup>
+
+            <ImageView
+                android:id="@+id/tab_menu_cursor"
+                android:layout_width="@dimen/menu_buttom_tab_layout_width"
+                android:layout_height="9.0px"
+                android:layout_alignLeft="@+id/tab_radio_group"
+                android:layout_alignTop="@+id/tab_radio_group"
+                android:layout_marginTop="3.0px"
+                android:background="@drawable/public_menu_cursor" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</TabHost>

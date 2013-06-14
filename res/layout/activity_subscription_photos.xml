@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray" >
+
+    <RelativeLayout
+        android:id="@+id/subscription_photos_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/black" >
+
+        <TextView
+            android:id="@+id/subscription_photos_txt_top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_bar_layout_height"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/public_top_bar_bg"
+            android:gravity="center_vertical"
+            android:text="@string/subscription_photos_txt_top_bar"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/title_bar_txt_size" />
+
+        <RelativeLayout
+            android:layout_width="74.0px"
+            android:layout_height="@dimen/title_bar_layout_height"
+            android:layout_alignRight="@+id/subscription_photos_txt_top_bar" >
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="32.0px"
+                android:layout_height="32.0px"
+                android:layout_centerInParent="true" />
+
+            <ImageView
+                android:id="@+id/subscription_photos_btn_refresh"
+                android:layout_width="@dimen/public_btn_refresh_layout_width"
+                android:layout_height="@dimen/title_bar_layout_height"
+                android:layout_alignParentRight="true"
+                android:background="@anim/public_btn_background"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:src="@drawable/public_btn_refresh" />
+
+            <ImageView
+                android:layout_width="@dimen/line_bg_layout_width"
+                android:layout_height="@dimen/title_bar_layout_height"
+                android:layout_toLeftOf="@+id/subscription_photos_btn_refresh"
+                android:background="@drawable/line_bg" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <share.photo.view.LazyScrollView
+        android:id="@+id/subcription_photos_waterfall_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/subscription_photos_title_bar"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:id="@+id/subcription_photos_waterfall_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_gray" >
+        </LinearLayout>
+    </share.photo.view.LazyScrollView>
+
+</RelativeLayout>

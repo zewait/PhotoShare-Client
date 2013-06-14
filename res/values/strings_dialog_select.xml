@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="dialog_select_txt_title">选择</string>
+	<string name="dialog_select_btn_take_photo">拍照</string>
+	<string name="dialog_select_btn_select_photo">选择图片</string>
+</resources>

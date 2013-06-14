@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+
+    <RelativeLayout
+        android:id="@+id/upload_user_photo_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/black" >
+
+        <TextView
+            android:id="@+id/upload_user_photo_textview_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_bar_layout_height"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/public_top_bar_bg"
+            android:gravity="center"
+            android:text="@string/upload_user_photo_textview_title"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/title_bar_txt_size" />
+
+        <ImageView
+            android:id="@+id/upload_user_photo_btn_back"
+            android:layout_width="@dimen/public_btn_refresh_layout_width"
+            android:layout_height="@dimen/title_bar_layout_height"
+            android:layout_alignLeft="@+id/upload_user_photo_textview_title"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@anim/public_btn_background"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:src="@drawable/public_btn_back" />
+
+        <ImageView
+            android:layout_width="@dimen/line_bg_layout_width"
+            android:layout_height="@dimen/title_bar_layout_height"
+            android:layout_toRightOf="@+id/upload_user_photo_btn_back"
+            android:background="@drawable/line_bg" />
+
+        <Button
+            android:id="@+id/upload_user_photo_btn_upload"
+            android:layout_width="@dimen/public_btn_refresh_layout_width"
+            android:layout_height="@dimen/title_bar_layout_height"
+            android:layout_alignRight="@+id/upload_user_photo_textview_title"
+            android:background="@anim/public_btn_background"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:singleLine="true"
+            android:text="@string/upload_user_photo_btn_upload"
+            android:textColor="@android:color/white"
+            android:textSize="24.0px" />
+
+        <ImageView
+            android:layout_width="@dimen/line_bg_layout_width"
+            android:layout_height="@dimen/title_bar_layout_height"
+            android:layout_toLeftOf="@+id/upload_user_photo_btn_upload"
+            android:background="@drawable/line_bg" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/upload_user_photo_title_bar" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/upload_user_photo_btn_camera"
+                android:layout_width="400.0px"
+                android:layout_height="400.0px"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20.0px"
+                android:background="@anim/public_btn_background"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onClick" >
+
+                <ImageView
+                    android:layout_width="200.0px"
+                    android:layout_height="200.0px"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/crackdown_btn_camera" />
+
+                <ImageView
+                    android:id="@+id/upload_user_img_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@null" />
+            </RelativeLayout>
+
+            <Gallery
+                android:id="@+id/upload_user_photo_gallery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/upload_user_photo_btn_camera"
+                android:spacing="4.0px"
+                android:unselectedAlpha="0.6" />
+
+            <EditText
+                android:id="@+id/upload_user_photo_content"
+                android:layout_width="400.0px"
+                android:layout_height="60.0px"
+                android:layout_alignLeft="@+id/upload_user_photo_btn_camera"
+                android:layout_below="@+id/upload_user_photo_gallery"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8.0px"
+                android:background="@color/bg_gray"
+                android:hint="@string/upload_user_photo_content"
+                android:padding="8.0px"
+                android:textColor="@android:color/black"
+                android:textSize="24.0px" />
+
+            <ImageView
+                android:id="@+id/upload_user_photo_img_rotate"
+                android:layout_width="50.0px"
+                android:layout_height="50.0px"
+                android:layout_alignLeft="@+id/upload_user_photo_btn_camera"
+                android:layout_below="@+id/upload_user_photo_content"
+                android:layout_marginTop="8.0px"
+                android:background="@anim/public_btn_background"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:src="@drawable/public_btn_refresh" />
+
+            <Button
+                android:id="@+id/upload_user_photo_btn_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/upload_user_photo_img_rotate"
+                android:layout_alignTop="@+id/upload_user_photo_img_rotate"
+                android:layout_below="@+id/upload_user_photo_content"
+                android:layout_marginLeft="8.0px"
+                android:layout_toRightOf="@+id/upload_user_photo_img_rotate"
+                android:background="@anim/public_btn_background"
+                android:onClick="onClick"
+                android:text="@string/upload_user_photo_btn_location"
+                android:textColor="@android:color/white"
+                android:textSize="22.0px" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="55.0px"
+                android:layout_marginTop="4.0px"
+                android:layout_marginLeft="150.0px"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/upload_user_photo_img_rotate"
+                android:layout_toRightOf="@+id/upload_user_photo_btn_location" >
+
+                <CheckBox
+                    android:id="@+id/upload_user_photo_checkbox_is_blow"
+                    android:layout_width="60.0px"
+                    android:layout_height="60.0px"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0px"
+                    android:layout_toRightOf="@+id/upload_user_photo_checkbox_is_blow"
+                    android:text="@string/upload_user_photo_checkbox_is_blow"
+                    android:textSize="24.0px" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
